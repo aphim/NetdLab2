@@ -1,0 +1,54 @@
+﻿<!-- Project Name: Net3202_Lab2_MidsizeLLP -->
+<!-- Author: Jacky Yuan -->
+<!-- Date: Oct 14, 2020 -->
+<!-- Description: Makes a database software program. -->
+<!-- Change log: N/A -->
+<Window x:Class="NetdLab2.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:NetdLab2"
+            mc:Ignorable="d"
+            Title="Midsize LLP" Height="450" Width="800">
+    <Grid x:Name="winMidSizeLLP">
+	    <Grid.ColumnDefinitions>
+		    <ColumnDefinition x:Name="Column0" Width ="250"/>
+		    <ColumnDefinition x:Name="Column1"/>
+	    </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column ="0" Margin="25,75,25,75">
+            <ListView x:Name="lwLendSelection" Height="280">
+                <ListViewItem x:Name="lwiLendOut" Content="Lend Out" Height="135"/>
+                <ListViewItem x:Name="lwiViewLentOut" Content="View Lent Out" Height="135"/>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel x:Name="spoutput" Grid.Column ="1"  Margin="50,75,50,75">
+            <Label x:Name="lblLendOut" HorizontalContentAlignment="Center" Content="Lend Out" Margin="10"/>
+            <Grid Height="110">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="OutputColumn0"/>
+                    <ColumnDefinition x:Name="OutputColumn1"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Height="110">
+                    <Label x:Name="lblName" Content="Name" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="lblEmployeeID" Content="Employee ID" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="lblEquipmentDesc" Content="Desc of Equipment" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="lblContactPhone" Content="Contact Phone #" HorizontalContentAlignment="Right"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Height="110">
+                    <TextBox x:Name="txtName" Text="" TextWrapping="Wrap" Width="120" Margin="5"/>
+                    <TextBox x:Name="txtEmployeeID" Text="" TextWrapping="Wrap" Width="120" Margin="5"/>
+                    <TextBox x:Name="txtEquipmentDesc" Text="" TextWrapping="Wrap" Width="120" Margin="5"/>
+                    <TextBox x:Name="txtContactPhone" Text="" TextWrapping="Wrap" Width="120"/>
+
+                </StackPanel>
+
+
+            </Grid>
+            <Button x:Name="btnAddToDB" Content="Add to Database" Margin="50"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
