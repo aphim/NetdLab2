@@ -1,0 +1,24 @@
+﻿<!-- Project Name: Net3202_Lab2 -->
+<!-- Author: Jacky Yuan -->
+<!-- Date: Oct 14, 2020 -->
+<!-- Description: Makes a database software program. -->
+<!-- Change log: N/A -->
+<!-- Initially generated code for the window-->
+    <UserControl x:Class="NetdLab2.ViewLentOut"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                 xmlns:local="clr-namespace:NetdLab2"
+                 mc:Ignorable="d" 
+                 d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+	    <!-- generate a stackpanel-->
+	    <StackPanel x:Name="spoutput" Grid.Column ="1"  Margin="50,75,50,75">
+		    <!--label: "View Equipment Lent Out" -->
+            <Label x:Name="lblViewLentOut" HorizontalContentAlignment="Center" Content="View Equipment Lent Out" Margin="10"/>
+		    <!-- Datagrid for sql table output -->
+            <DataGrid x:Name="dtgOutputDisplay" Height="100"/>
+	    </StackPanel>
+        </Grid>
+</UserControl>

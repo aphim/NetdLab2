@@ -1,0 +1,54 @@
+﻿<!-- Project Name: Net3202_Lab2 -->
+<!-- Author: Jacky Yuan -->
+<!-- Date: Oct 14, 2020 -->
+<!-- Description: Makes a database software program. -->
+<!-- Change log: N/A -->
+
+<!-- Initially generated code for the window-->
+<UserControl x:Class="NetdLab2.LendOut"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetdLab2"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+	<Grid>
+		<!-- generate a stackpanel-->
+        <StackPanel x:Name="spoutput" Grid.Column ="1"  Margin="50,75,50,75">
+	        <!--label: "Lend Out" -->
+            <Label x:Name="lblLendOut" HorizontalContentAlignment="Center" Content="Lend Out" Margin="10"/>
+	        <!--Create a grid system with 2 grid columns -->
+            <Grid Height="110">
+	        <Grid.ColumnDefinitions>
+		        <ColumnDefinition x:Name="OutputColumn0"/>
+		        <ColumnDefinition x:Name="OutputColumn1"/>
+	        </Grid.ColumnDefinitions>
+	            <!-- generate a stackpanel-->
+                <StackPanel Grid.Column="0" Height="110">
+	                <!--label: "Name:" -->
+                    <Label x:Name="lblName" Content="Name" HorizontalContentAlignment="Right"/>
+	                <!--label: "Employee ID:" -->
+                    <Label x:Name="lblEmployeeID" Content="Employee ID" HorizontalContentAlignment="Right"/>
+	                <!--label: "Equipment Desc:" -->
+	                <Label x:Name="lblEquipmentDesc" Content="Desc of Equipment" HorizontalContentAlignment="Right"/>
+	                <!--label: "Contact Phone:" -->
+                    <Label x:Name="lblContactPhone" Content="Contact Phone #" HorizontalContentAlignment="Right"/>
+	        </StackPanel>
+	        <StackPanel Grid.Column="1" Height="110">
+					<!--textbox for name input" -->
+                    <TextBox x:Name="txtName" Text="" TextWrapping="Wrap" Width="120" Margin="4"/>
+					<!--textbox for employee ID input" -->
+                    <TextBox x:Name="txtEmployeeID" Text="" TextWrapping="Wrap" Width="120" Margin="4"/>
+					<!--textbox for equipment Description input" -->
+                    <TextBox x:Name="txtEquipmentDesc" Text="" TextWrapping="Wrap" Width="120" Margin="4"/>
+					<!--textbox for Contact Number input" -->
+					<TextBox x:Name="txtContactPhone" Text="" TextWrapping="Wrap" Width="120" Margin="4"/>
+	        </StackPanel>
+            </Grid>
+	        <!--creates a button; "Add to Database" -->
+            <Button x:Name="btnAddToDB" Content="Add to Database" Margin="50" Click="btnAddToDB_Click"/>
+        </StackPanel>
+	</Grid>
+</UserControl>
