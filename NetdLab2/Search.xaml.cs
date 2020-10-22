@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace NetdLab2
 {
@@ -81,8 +82,16 @@ namespace NetdLab2
                 //import the table
                 DataTable dt = new DataTable("Users");
                 sda.Fill(dt);
-                //Bind datatable to the sql table
-                dtgSearchDisplay.ItemsSource = dt.DefaultView;
+                int checkExists = dt.Rows.Count;
+                if(checkExists>0)
+                {
+                    //Bind datatable to the sql table
+                    dtgSearchDisplay.ItemsSource = dt.DefaultView;
+                }
+                else
+                {
+                    MessageBox.Show("The ID does not exist.");
+                }
             }
             catch (Exception ex)
             {
